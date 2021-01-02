@@ -32,7 +32,7 @@ def nearlySimilarRectangles(sides):
             res += comb
     return (int(res))
 ```
-### filledOrders
+### unexpected-demands
 ```ruby
 def filledOrders(order, k):
     # Write your code here
@@ -44,3 +44,41 @@ def filledOrders(order, k):
             k=k-order[i]
     return c
 ```
+### vowel-substring
+```ruby
+def findSubstring(s, k):
+    # Write your code here
+    vowels = {"a","e","i","o","u"}
+    i=0
+    res = ""
+    substr = s[0:k]
+    vowel_count = 0
+    for val in substr:
+            if val in vowels:
+                vowel_count +=1
+    max_v = vowel_count
+    if   vowel_count >0:
+        res = substr          
+    start = 1
+    end = start+k
+    while end <=len(s):
+        #print("startend",start,end)
+        if s[start-1] in vowels:
+            vowel_count -=1
+            #print("start",s[start],vowel_count)
+        if s[end-1] in vowels:
+            vowel_count +=1
+            #print(s[end-1],vowel_count)
+        if vowel_count > max_v:
+            #print(start,end)
+            res = s[start:end]
+            max_v = vowel_count
+        #print(s[start],s[end-1])
+        #print(start,end,vowel_count,max_v,s[start:end])
+        start+=1
+        end+=1 
+    if res:
+        return res
+    else :
+        return "Not found!"
+    ```
