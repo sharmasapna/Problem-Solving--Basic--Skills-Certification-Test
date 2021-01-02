@@ -32,7 +32,7 @@ def nearlySimilarRectangles(sides):
             res += comb
     return (int(res))
 ```
-### filledOreders
+### filledOrders
 ```ruby
 def filledOrders(order, k):
     # Write your code here
