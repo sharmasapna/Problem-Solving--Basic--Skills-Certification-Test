@@ -1,4 +1,4 @@
-# Problem Solving (Basic) Skills Certification Test
+## Problem Solving (Basic) Skills Certification Test HackerRank
 ### nearlySimilarRectangles
 ```ruby
 def nearlySimilarRectangles(sides):
